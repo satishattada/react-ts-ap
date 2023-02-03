@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "id": "1201",
+      "name": "attada",
+      "email": "attada@gmail.com",
+      "phoneNumber": "0987654322"
+    },
+    {
+        "id": "1202",
+        "name": "satish",
+        "email": "satish@gmail.com",
+        "phoneNumber": "0987653221"
+      },
+      {
+        "id": "1203",
+        "name": "kumar",
+        "email": "kumar@gmail.com",
+        "phoneNumber": "0957654321"
+      }
+  ]
+}
