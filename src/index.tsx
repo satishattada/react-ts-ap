@@ -10,7 +10,7 @@ import thunk from "redux-thunk";
 import { persistStore, persistReducer } from 'redux-persist';
 import { PersistGate } from 'redux-persist/integration/react';
 import storageSession from 'redux-persist/lib/storage/session';
-
+// import store from './redux/store';
 const persistConfig = {
   key: 'root',
   storage: storageSession,
@@ -24,13 +24,13 @@ const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <Provider store={store}>
     <PersistGate loading={null} persistor={persistor}>
       <App />
       </PersistGate>
     </Provider>
-  </React.StrictMode>
+  // </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

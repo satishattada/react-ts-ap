@@ -1,18 +1,21 @@
+import {GET_USERS_SUCCESS} from '../../types'
+
+
 type InitialStateObj = {
   userData: any;
   accessToken: String;
   selectedProfile: any;
-  users: String[]
+  usersData: any[]
 };
 
 const initialState: InitialStateObj = {
   userData: {},
-  users: [],
+  usersData: [],
   accessToken: "12345",
   selectedProfile: {},
 };
 
-const user = (state = initialState, action: any) => {
+const users = (state = initialState, action: any) => {
   switch (action.type) {
     case "GET_LOGIN_SUCCESS":
     case "GET_REGISTER_SUCCESS":
@@ -22,10 +25,10 @@ const user = (state = initialState, action: any) => {
         userData: action.payload.user,
         selectedProfile: action.payload.user,
       };
-      case "GET_USERS_SUCCESS":
+      case GET_USERS_SUCCESS:
           return {
             ...state,
-            users: action.payload,
+            usersData: action.payload,
           };
     
     default:
@@ -33,4 +36,4 @@ const user = (state = initialState, action: any) => {
   }
 };
 
-export default user;
+export default users;

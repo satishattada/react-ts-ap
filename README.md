@@ -66,7 +66,7 @@ Start JSON Server
 
 <!-- json-server --watch data.json -->
 
-npx json-server --watch data.json --port 3004
+npx json-server --watch db.json --port 3004
 
 npx json-server data.json -m ./node_modules/json-server-auth --port 3004
 

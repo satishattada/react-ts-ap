@@ -1,5 +1,6 @@
 
 import UserService from "../../../services/user.service";
+import { GET_USERS_FAIL, GET_USERS_SUCCESS } from "../../types";
 
 export const loginUser = (params: any) => async (dispatch: any) => {
   return UserService.loginUser(params).then(
@@ -34,7 +35,7 @@ export const getUsers = () => async (dispatch: any) => {
     (data: any) => {
       if (data) {
         dispatch({
-          type: 'GET_USERS_SUCCESS',
+          type: GET_USERS_SUCCESS,
           payload: data,
         });
         return Promise.resolve("success");
@@ -43,7 +44,7 @@ export const getUsers = () => async (dispatch: any) => {
     },
     (error: any) => {
       dispatch({
-        type: 'GET_USERS_FAIL',
+        type: GET_USERS_FAIL,
       });
       return Promise.reject();
     },
