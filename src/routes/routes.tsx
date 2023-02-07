@@ -4,6 +4,7 @@ import Layout from "../pages/layout/layout";
 import Dashboard from "../pages/layout/dashboard/dashboard";
 import NoPage from "../pages/noPage/noPage";
 import Login from "../pages/login/login";
+import LoginPage from "../pages/loginPage";
 
 function RoutesContainer() {
   return (
@@ -13,7 +14,7 @@ function RoutesContainer() {
           <Route path="/" element={<Dashboard />} />
         </Route>
         <Route path="*" element={<NoPage />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<LoginPage />} />
       </Routes>
     </BrowserRouter>
   );
