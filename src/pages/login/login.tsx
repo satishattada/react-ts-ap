@@ -24,8 +24,8 @@ const Login = (props: LoginProps) => {
 }
 export const mapStateToProps = (state: any) => {
   return {
-    accessToken: state.user.accessToken,
-    userData: state.user.userData
+    accessToken: state.users.accessToken,
+    userData: state.users.userData
   };
 };
 export default connect(mapStateToProps, null)(withParamsAndNavigate(Login));
